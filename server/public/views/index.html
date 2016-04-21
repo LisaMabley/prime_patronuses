@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="patronusApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Patronuses</title>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src= "/assets/scripts/client.min.js"></script>
+
+  </head>
+  <body ng-controller="MainController as main">
+    <h1>Patronus Sorting Hat</h1>
+    <h2>Patronuses</h2>
+    <input type="text" ng-model="main.patName" />
+    <button ng-click="main.addPatronus()">Add Patronus</button>
+    <ul>
+      <li ng-repeat="pat in main.patList">{{pat.name}}</li>
+    </ul>
+
+    <h2>People</h2>
+    <label>First Name:</label>
+    <input type="text" ng-model="main.personFirst" />
+    <label>Last Name:</label>
+    <input type="text" ng-model="main.personLast" />
+    <button ng-click="main.addPerson()">Add Person</button>
+    <ul>
+      <li ng-repeat="person in main.peopleList">{{person.first_name}} {{person.last_name}}</li>
+    </ul>
+  </body>
+</html>
